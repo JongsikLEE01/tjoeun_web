@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관계선택자</title>
+    <style>
+        article{ border: 3px solid orange;}
+        aside{ border: 3px solid hotpink; margin: 10px;}
+
+        /* 하위선택자 */
+        /* 해당 요소 내부에 있는 요소 선택 : (요소) (요소) : 띄어쓰기로 계층 구분 */
+        article section ul{
+            color: red;
+        }
+        
+        /* 자식선택자 */
+        /* 기호로 밑의 하위 요소만을 선택 (기호 : >) */
+        article > section ul{
+            color: blue;
+        }
+
+        /* 인접선택자 */
+        /* a+b : a와 인접한 b를 선택 : a 요소 뒤에 나오는 요소만 인식 */
+        h1 + h3{
+            color: cornflowerblue;
+            font-size: 30px;
+        }
+
+        /* 형제선택자 */
+        /* A~B : 같은 부모를 가지는 a와 형재 요소인 b를 선택*/
+        article ~ article h2{
+            color: beige;
+            background-color: rebeccapurple;
+            padding: 5px;
+        }
+        /* [형제요소인 선택자] ~ [스타일 적용할 선택자] */
+        p ~ span{
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>관계선택자</h1>
+    <header>
+        <dib class="logo">로고</dib>
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+        </ul>
+    </header>
+
+    <article>
+        <h1>제목</h1>
+        <h3>설명</h3>
+        <section>
+            <h2>부제목</h2>
+            <ul>
+                <li>리스트1</li>
+                <li>리스트2</li>
+                <li>리스트3</li>
+            </ul>
+        </section>
+        <aside>
+            <h2>사이드바제목</h2>
+            <h3>설명</h3>
+            <section>
+                <ul>
+                    <li>사이드메뉴1</li>
+                    <li>사이드메뉴2</li>
+                    <li>사이드메뉴3</li>
+                </ul>
+            </section>
+        </aside>
+    </article>
+
+    <article>
+        <h1>제목</h1>
+
+        <h2>소제목1</h2>
+        <section>내용1</section>
+
+        <h2>소제목2</h2>
+        <section>내용2</section>
+
+        <h2>소제목3</h2>
+        <section>내용3</section>
+
+        <p>p+형재자매요소</p>
+        <span>span+형제자매요소</span>
+        <p>p+형재자매요소</p>
+        <span>span+형제자매요소</span>
+        <p>p+형재자매요소</p>
+        <span>span+형제자매요소</span>
+    </article>
+
+    <article>
+        <h2>artice ~ article(뒤에만 적용)</h2>
+    </article>
+
+    <footer>
+        푸터
+    </footer>
+</body>
+</html>

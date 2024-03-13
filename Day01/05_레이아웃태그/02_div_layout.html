@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div layout</title>
+    <style>
+        /* (선택자) { 스타일 속성 : 속성값; } */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 클래스 속성은 .으로 구분 */
+        .header{
+            background-color: #aaa;
+            padding: 50px;
+            text-align: center;
+            font-size: 35px;
+        }
+        /* 메인 영역 */
+        .left-side{
+            background-color: #bbb;
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+        }
+        .main{
+            float: left;
+            background-color: #ccc;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+        }
+        .right-side{
+            background-color: #ddd;
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+        }
+        .footer{
+            background-color: black;
+            padding: 15px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 35px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>div 레이아웃</h1>
+    <!-- .header>h2{헤더영역} -->
+    <div class="header">
+        <h2>헤더영역</h2>
+    </div>
+
+    <!-- .container>(.left-side{left Side}+.main{main}+.right-side{rigth side}) -->
+    <div class="container">
+        <div class="left-side">왼쪽</div>
+        <div class="main">메인</div>
+        <div class="right-side">오른쪽</div>
+    </div>
+
+    <!-- .footer>p{footer} -->
+    <div class="footer">
+        <p>푸터</p>
+    </div>
+</body>
+</html>

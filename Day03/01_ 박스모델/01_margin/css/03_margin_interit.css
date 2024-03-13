@@ -1,0 +1,15 @@
+.continaer{
+    position: relative;
+    width: 1200px;
+    border: 3px solid orange;
+    margin: auto;
+}
+
+section{
+    /* inherit : 부모요소 지정값을 상속받음 */
+    /* 부모요소 continaer, 자식요소 section */
+    margin: inherit;    /* 부모로 상속받아 auto 적용 */
+    width: 900px;
+    height: 200px;
+    border: 3px solid gray;
+}

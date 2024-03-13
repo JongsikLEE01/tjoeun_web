@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word-wrap</title>
+    <style>
+        .container{
+            margin: auto;
+            width: 900px;
+            padding: 50px;
+            border: 1px solid gray;
+        }
+        p.text{
+            width: 160px;
+            border: 1px solid black;
+
+            /* 긴 단어를 다음줄로 넘김 */
+            word-wrap: break-word;
+
+            /* 줄바꿈 기준을 설정 */
+            /* 
+                keep-all : 단어기준 줄바꿈
+                break-all : 글자기준 줄바꿈
+            */
+            word-break: keep-all;
+        }
+        /*  영문 : 단어(공백)기준으로 개행
+            한글 : 단어, 글자 구분없이 개행 */
+    </style>
+</head>
+<body>
+    <h1>wordwrap</h1>
+    <div class="container">
+        <p class="text">
+            매우긴단어가있는경우에 자동적으로 잘라준다
+            하하하하하하하하하하하하하하하하하하하하핳
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            this is html, css, javascript
+        </p>
+    </div>
+</body>
+</html>

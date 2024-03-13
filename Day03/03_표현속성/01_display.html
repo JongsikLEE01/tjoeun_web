@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <link rel="stylesheet" href="css/01_display.css">
+</head>
+<body>
+    <center><h1>display</h1></center>
+    <div class="container">
+        <h1>display : inline, inline-block</h1>
+        <hr>
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+        </ul>
+
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li class="none">javascript</li>    <!-- display : none -->
+            <li>jquery</li>
+        </ul>
+
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li class="hiden">javascript</li>    <!-- display : hidden -->
+            <li>jquery</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h3>display : grid</h3>
+        <h3>그리드 레이아웃을 컨테이너로 지정</h3>
+        <div class="grid-container">
+            <!-- (.item>img[src="img/grid.png"][alt="상품이미지"][width="250px"])*10 -->
+            <div class="item"><img src="img/grid.jpg" alt="상품이미지" width="250px"></div>
+            <div class="item"><img src="img/grid.jpg" alt="상품이미지" width="250px"></div>
+            <div class="item"><img src="img/grid.jpg" alt="상품이미지" width="250px"></div>
+            <div class="item"><img src="img/grid.jpg" alt="상품이미지" width="250px"></div>
+            <div class="item"><img src="img/grid.jpg" alt="상품이미지" width="250px"></div>
+            <div class="item"><img src="img/grid.jpg" alt="상품이미지" width="250px"></div>
+            <div class="item"><img src="img/grid.jpg" alt="상품이미지" width="250px"></div>
+            <div class="item"><img src="img/grid.jpg" alt="상품이미지" width="250px"></div>
+            <div class="item"><img src="img/grid.jpg" alt="상품이미지" width="250px"></div>
+            <div class="item"><img src="img/grid.jpg" alt="상품이미지" width="250px"></div>
+        </div>
+    </div>
+ 
+    <!-- display : flex -->
+    <div class="container">
+        <h1>display : flex</h1>
+        <h3>flex 레이아웃 지정</h3>
+        <div class="flex-container">
+            <!-- (.item>img[src="img/v$$.jpg"][alt="이미지"])*15 -->
+            <div class="col">
+                <div class="item"><img src="img/v01.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v02.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v05.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v03.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v04.jpg" alt="이미지"></div>
+            </div>
+            <div class="col">
+                <div class="item"><img src="img/v06.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v07.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v08.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v09.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v10.jpg" alt="이미지"></div>
+            </div>
+            <div class="col">
+                <div class="item"><img src="img/v11.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v12.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v13.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v14.jpg" alt="이미지"></div>
+                <div class="item"><img src="img/v15.jpg" alt="이미지"></div>     
+            </div>
+        </div>
+    </div>
+</body>
+</html>

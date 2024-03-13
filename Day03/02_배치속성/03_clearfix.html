@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearfix</title>
+    <link rel="stylesheet" href="css/03_clearfix.css">
+</head>
+<body>
+    <center><h1>clearfix</h1></center>
+    <h3>float로 인해 다음 요소에 영향을 미치는 것을 해당 부모 요소에서 해소</h3>
+     <div class="container">
+        <h1>clear- :after</h1>
+        <div class="inner">
+            <!-- :after 문장의 마지막 영역에 가상 요소를 지정 -->
+            <div class="item left"></div>
+            <div class="item right"></div>
+            <!-- :after : 여기서 clear 속성을 적용해 다음 요소에 미치는 영향을 방지 -->
+        </div>
+        <div class="item next"></div>
+     </div>
+</body>
+</html>
