@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrap {
+    width : 960px; 
+    height: 800px; 
+    margin: 0 auto;
+    color:#fff;
+    font-size: 30px;
+    text-align: center;
+} 
+header {
+    width : 960px; 
+    height: 100px; 
+    background-color: #111;
+    line-height: 100px;
+}
+nav {
+    width : 960px; 
+    height: 100px;
+    background-color: #222;
+    line-height: 100px;
+}
+article {
+    width : 360px; 
+    height: 500px;
+    background-color: #333; 
+    float: left;
+    line-height: 500px;
+}
+section {
+    width : 600px; 
+    height: 500px; 
+    background-color: #444; 
+    float: left;
+    line-height: 500px;
+}
+footer {
+    width : 960px; 
+    height: 100px; 
+    background-color: #555; 
+    clear: both;
+    line-height: 100px;
+}
