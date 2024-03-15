@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/*reset*/
+* {margin: 0; padding: 0; box-sizing: border-box; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {text-decoration: inherit; color: inherit;}
+li {list-style: none;}
+img {vertical-align: middle;}
+a img {border: none;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+body { 
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 글씨 드래그 시, 상태를 지정하는 선택자 */
+::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* CSS 변수 선언 */
+/* --변수명 : 값; */
+/* 변수 사용 : var(변수명) */
+:root {
+    /* 메인 컬러 지정 */
+    --main-color : #dce6ff;
+    --sub-color : #668ef6;
+
+    /* 폰트 사이즈 지정 */
+    --text-title: 32px;
+    --text-noraml: 16px;
+    
+    /* 기본사이즈 */
+    --container-size: 1200px;
+}

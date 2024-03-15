@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+.btn{
+    border: none;
+    padding-block: 0;
+    padding-inline: 0;
+    padding: 14px 16px;
+    cursor: pointer;
+    background-color: darkviolet;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+.btn:hover{background-color: rgb(115, 14, 158);}
+
+a.btn{
+    font-size: 14px;
+}
+
+.btn i {
+    font-size: 20px !important;
+}
+
+.icon-box{
+    margin: 20px 0;
+}

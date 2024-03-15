@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.btn {
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 1s;
+}
+
+.success{ background-color: lightgreen; }
+.success:hover{ background-color: rgb(71, 153, 71);}
+.success:active{ background-color: rgb(34, 58, 34); }
+
+.info{ background-color: lightblue; }
+.info:hover{ background-color: rgb(101, 127, 136); }
+.info:active{ background-color: rgb(43, 53, 56); }
+
+.warning{ background-color: lightsalmon;}
+.warning:hover{ background-color: rgb(134, 85, 65);}
+.warning:active{ background-color: rgb(61, 38, 28);}
+
+.danger{ background-color: lightcoral;}
+.danger:hover{ background-color: rgb(121, 65, 65);}
+.danger:active{ background-color: rgb(46, 24, 24);}
+
+.default{ background-color: lightgray; color: black;}
+.default:hover{ background-color: rgb(117, 115, 115); color: black;}
+.default:active{ background-color: rgb(36, 34, 34); color: white;}
+
+.btn.lg{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}

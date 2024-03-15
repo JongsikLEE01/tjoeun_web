@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 900px;
+    height: 900px;
+    margin: 0 auto;
+    /* border: 1px solid salmon;s */
+}
+
+ul{list-style-type: none;}
+a{text-decoration: none; color: black;}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header nav {
+    height: 60px;
+}
+header nav .mainmenu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: white;
+}
+
+/* 메인메뉴 */
+header nav .mainmenu > li {
+    width: 200px;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 1px solid royalblue;
+    margin: 2px;
+}
+header nav .mainmenu > li a {
+    /* a태그(글씨)가 아닌 배경을 클릭해도 화면이 넘어가게 만듬 */
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+header nav .mainmenu > li:hover{
+    background-color: royalblue;
+    transition: 0.7s;
+}
+header nav .mainmenu > li:hover > a{
+    color: white;
+    transition: 0.7s;
+}
+
+/* 메인 메뉴에 마우스 호버시 서브 메뉴 출력 */
+header nav .mainmenu > li:hover .submenu{
+    display: inherit;
+}
+
+
+/* 서브메뉴 */
+header nav .submenu {
+    display: none;
+}
+header nav .submenu li {
+    background-color: rgb(226, 226, 226);
+}
+header nav .submenu li:hover{
+    background-color: royalblue;
+    transition: 0.7s;
+}
+header nav .submenu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
