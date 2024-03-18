@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope</title>
+    <script>
+        function test(){
+            var local =10
+
+            if(local > 0){
+                let local = 20
+                console.log(`local : ${local}`);
+            }
+
+            console.log(`local : ${local}`);
+        }
+
+        function test2(){
+            let local2 =10
+
+            if(local2 > 0){
+                // 호이스팅 발생
+                // : 변수가 선언된 줄 이전에 해당 범위에서 변수 값을 사용할 수 있는 경우
+                // 해당 범위의 맨 위로 끌어올리는 것처럼 보이는 현상
+
+                // let 변수 초기화 전 접근시 참조에러 발생
+                console.log(`local2 : ${local2}`);
+                
+
+                let local2 = 20     // 변수 선언 위치
+                console.log(`local2 : ${local2}`);
+            }
+            console.log(`local2 : ${local2}`);
+        }
+
+        test()
+        test2()
+
+        console.log(`test3 : ${test3}`);
+        console.log(`test3 : ${test4}`);
+        var test3='test'
+        var test4='test'
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
