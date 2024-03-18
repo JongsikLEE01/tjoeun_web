@@ -311,7 +311,7 @@ nav.mobile ul li a:hover {
 section{
     width: 100%;
     min-height: 400px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 100px 0;
 }
 
@@ -383,5 +383,93 @@ section{
 .card .card-bottom i {font-size: 30px; color: lightcoral;}
 /* ---- 섹션 02 -----*/
 
-/* ---- 섹션 03 -----*/
-/* ---- 섹션 03 -----*/
+/* ---- 섹션 03, 04 -----*/
+.layout-detail .inner { 
+    /* padding: 0 100px; */
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+ }
+.layout-detail .inner .detail-left img{ 
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+ }
+
+.layout-detail .inner .detail-rigth { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+.layout-detail .inner .detail-rigth .content-box h3 { 
+    font-size: 32px;
+}
+.layout-detail .inner .detail-rigth .content-box p { 
+    font-size: 18px;
+}
+.layout-detail .inner .detail-rigth .btn-box {  
+    display: flex;
+    justify-content: flex-end;
+}
+.btn { 
+    display: inline-block;
+    min-width: 120px;
+    padding: 12px 14px;
+    background-color: var(--sub-color);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+ }
+
+ /* layout-detail.reverse */
+ .layout-detail.reverse .detail-left{ order: 2; }
+ .layout-detail.reverse .detail-rigth{ order: 1; }
+/* ---- 섹션 03, 04 -----*/
+
+/* foooter */
+footer { 
+    width: 100%;
+    min-height: 400px;
+    background-color: #212121;
+    margin-top: 50px;
+    position: relative;
+    color: var(--main-color);
+    padding-top: 40px;
+ }
+footer .footer-menu { 
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-left: 200px;
+
+ }
+footer .footer-menu .site-map { 
+    display: flex;
+    column-gap: 100px;
+ }
+ footer .footer-menu .site-map .item ul{
+    transition: 0s;
+ }
+footer .footer-menu .site-map .item ul li { 
+    margin: 20px 0;
+    cursor: pointer;
+ }
+ footer .footer-menu .site-map .item ul li:hover{
+    transition: 0.7s;
+    color: var(--sub-color);
+ }
+
+footer .footer-menu .family-site select .mail{ 
+    display: flex;
+    color: white;
+ }
+footer .footer-menu .family-site select{ 
+    position: relative;
+    padding: 10px 30px;
+    top: 15px;
+    left: 60px;
+    margin-left: 400px;
+ }
+
+footer .copy { text-align: center; padding: 50px;}
+/* foooter */
