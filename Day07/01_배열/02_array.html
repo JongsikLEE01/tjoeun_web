@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 활용</title>
+    <script>
+        // 1~10 정수 중 홀수만 추출해 제곱한 수를 배열로 반환
+        const list =[1,2,3,4,5,6,7,8,9,10]
+        let array = []
+
+        list.forEach(function(odd){
+            if(odd % 2 == 1)
+                document.write(`<h1>${odd*odd}</h1>`)
+        });
+
+        for(let i =0; i< list.length; i++){
+            if(list[i] % 2 == 1)
+            array.push(list[i]*list[i])
+        }
+        console.log(array);
+
+        let odd = list.filter(item => item % 2 == 1)
+        let arrOdd = odd.map(item => item*item)
+        console.log(arrOdd);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

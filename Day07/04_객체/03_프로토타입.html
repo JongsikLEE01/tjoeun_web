@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입</title>
+    <script>
+        /* 프로토타입
+            모든 객체가 프로토타입이라는 객체를 가짐
+            해당 객체가 상속되는 정보를 제공하는 객체
+            
+            프로토타입 객체 생성(생성자 함수로 객체 생성)
+            객체 생성자 함수를 정의해 프로토타입 정의*/
+
+        // 생성자 정의
+        function Person(name, age){
+            this.name = name
+            this.age = age
+            this.test = function(){
+                document.write(`<h1>test</h1>`)
+            }
+        }
+
+        console.log(Person);
+
+        // 객체 생성
+        let person = new Person('김조은',20)
+        
+        console.log(person);
+
+        // 객체 속성 접근
+        document.write(`이름? ${person.name}<br>`)
+        document.write(`나이? ${person.age}<br>`)
+
+        // 객체 속성 삭제
+        delete person.age
+
+        document.write(`나이? ${person.age}<br>`) // undefined 출력
+
+        let person2 = new Person('박조은',30)
+        document.write(`이름? ${person2["name"]}<br>`)  // []를 이용한 속성 출력
+        document.write(`나이? ${person2["age"]}<br>`)
+
+        // 객체 생성 후 메소드 추가
+        // 프로토타입이 아닌 person2에 printInfo 메소드를 정의
+        person2.printInfo = function(){
+            return `${this.name} (${this.age})`
+        }
+
+        // 객체 생성 후 속성 추가
+         // 프로토타입이 아닌 person2에 title 속성을 정의
+        person2.title = '새 속성'
+
+        // person은 printInfo 메소드가 정의되지 않음
+        // person.printInfo is not a function 에러 발생
+        // document.write(person.printInfo()+'<br>')
+        document.write(person2.printInfo()+'<br>')
+        document.write('title? '+person2.title + '<br>')
+
+        // person에는 title 속성이 정의되지 않아 undefined 출력
+        document.write('person.title? '+person.title)
+
+        person.test()
+
+        // 프로토타입 메소드 추가
+        Person.prototype.getInfo = function(){
+            document.write(` - 이름 : ${this.name}<br> - 나이 : ${this.age}<br>`)
+        }
+
+        person.getInfo()
+        person2.getInfo()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이벤트</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea')
+            const ul = document.querySelector('ul')
+            const count = document.querySelector('#count')
+
+            // 키이벤트
+            textarea.addEventListener('keyup', (event) => {
+                // 글자수
+                const length = textarea.value.length
+                count.textContent = length
+
+                // 엔터 입력
+                console.log(event.keyCode);
+                if(event.keyCode == '13'){
+                    const text = textarea.value
+                    const li = document.createElement('li') // li요소 생성
+                    li.textContent = text
+                    ul.appendChild(li)      // ul 자식 요소로 li 추가
+
+                    // 텍스트 입력 비우기
+                    textarea.value = ''     // 입력 메세지 비움
+                    count.textContent = 0   // 글자수 0으로 초기화
+                }
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul></ul>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <h3>글자수 : <span id="count"></span></h3>
+</body>
+</html>
