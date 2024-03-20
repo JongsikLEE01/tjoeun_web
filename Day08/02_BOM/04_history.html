@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history</title>
+    <script>
+        function main(){ location.assign('./index.html') }
+        function back(){ history.back() }
+        function forword(){ history.forward() }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let $go = document.getElementById('go')
+
+            $go.addEventListener('click', () => {
+                let number = document.getElementById('number').value
+                history.go(number)
+                // go(숫자)
+                // +숫자 : 앞으로 이동
+                // -숫자 : 뒤으로 이동
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="btn-box">
+        <button id="main" onclick="main()">메인</button>
+        <button id="back" onclick="back()">뒤로가기</button>
+        <button id="forword" onclick="forword()">앞으로가기</button>
+        <input type="number" id="number">
+        <button id="go">기록 이동하기</button>
+    </div>
+</body>
+</html>

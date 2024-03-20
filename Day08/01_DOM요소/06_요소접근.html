@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소접근</title>
+    <script>
+        // 노드 관계에 따라 요소를 접근하는 방법
+        document.addEventListener("DOMContentLoaded", () => {
+            let container = document.getElementsByClassName('container')[0]
+
+            // childNodes : 해당 요소의 자식노드들
+            console.log(container.childNodes);
+            console.log(container.childNodes[2]);
+            console.log(container.childNodes[5]);
+
+            let section1 = document.getElementsByTagName('section')[0]
+            console.log(section1.firstChild);
+            console.log(section1.childNodes[1]);
+            console.log(section1.lastChild);
+
+            // 현재 노드의 이전 노드 선택
+            console.log(section1.childNodes[1].previousSibling);
+            // 현재 노드의 이후 노드 선택
+            console.log(section1.childNodes[1].nextSibling);
+
+            let item1 = document.getElementById('item1')
+            console.log(item1.nodeName);    // div(태그이름) 반환
+            console.log('class? '+item1.attributes[0].nodeValue);  // 클래스명 반환
+
+            console.log(item1.nodeValue);
+            console.log(item1.firstChild.nodeValue);    // 아이템1(text)반환
+            console.log(item1.lastChild.firstChild.nodeValue);  // span태그의 추가요소(텍스트) 반환
+            console.log(item1.nodeType);    // 1, 즉 요소 노드임을 반환
+        })
+    </script>
+</head>
+<body>
+    <div class="container"><!-- text : 엔터 공백-->
+        <h1>제목</h1><!-- text : 엔터 공백 -->
+        <ul class="list">
+            <!-- (li>a{리스트$})*4 -->
+            <li><a href="">리스트1</a></li>
+            <li><a href="">리스트2</a></li>
+            <li><a href="">리스트3</a></li>
+            <li><a href="">리스트4</a></li>
+        </ul><!-- text : 엔터 공백-->
+    </div>
+    <section><img src="" alt="이미지1"><img src="" alt="이미지2"><img src="" alt="이미지3"></section>
+    <section>
+        <!-- .item#item${아이템$}*4 -->
+        <div class="item" id="item1">아이템1 <span>추가요소</span></div>
+        <div class="item" id="item2">아이템2</div>
+        <div class="item" id="item3">아이템3</div>
+        <div class="item" id="item4">아이템4</div>
+    </section>
+</body>
+</html>

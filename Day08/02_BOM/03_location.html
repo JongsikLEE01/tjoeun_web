@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loaction</title>
+    <script>
+        // location
+        // : 현재 페이지에 대한 위치 정보를 가진 객체
+        document.write(`<h3>현재 주소 :  ${location.href} </h3>`)
+        document.write(`<h3>호스트 이름 :  ${location.hostname} </h3>`)
+        document.write(`<h3>포트:  ${location.port} </h3>`)
+        document.write(`<h3>경로 :  ${location.pathname} </h3>`)
+        document.write(`<h3>프로토콜 :  ${location.protocol} </h3>`)
+        document.write(`<h3>쿼리스트링 :  ${location.search} </h3>`)
+
+        document.addEventListener("DOMContentLoaded", () =>{
+            // 버튼 요소 선택
+            let $move = document.getElementById('move')
+            let $refresh = document.getElementById('refresh')
+
+            // 페이지 이동 버튼 클릭 이벤트
+            $move.addEventListener('click', () =>{
+                // location.assign('http://www.naver.com')    뒤로가기 가능
+                // location.replace('http://www.naver.com')   뒤로가기 불가능
+                location.href = './index.html'               // 페이지 이동
+            })
+
+            // 새로 고침 버튼 클릭 이벤트
+            $refresh.addEventListener('click', () =>{
+                location.reload()           // 새로고침
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="conatainer">
+        <div class="btn-box">
+            <button id="move">페이지 이동</button>
+            <button id="refresh">새로 고침</button>
+        </div>
+    </div>
+</body>
+</html>

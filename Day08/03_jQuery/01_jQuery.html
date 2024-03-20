@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script>
+
+    </script>
+    <!-- jQuery 라이브러리 파일로 포함 -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <!-- 
+        CDN(Content Delivery Network)
+        : 컨텐츠를 빠르게 다운 받을 수 있도록 해주는 분산 서버
+        <script src="https://code.jquery.com/jQuery-3.7.1.min.js"></script>
+     -->
+
+     <script>
+        // 자바 스크립트 - 문서준비 이벤트
+        // document.addEventListener("DOMContentLoaded", () => { })
+
+        // jQuery - 문서 준비 이벤트
+        // $(document).ready(function() { })
+
+        // 축약형
+        $(function() {
+            alert('hello jQuery')
+            // document.getElementsByTagName('h1')[0]
+            $('h1').text('Hello jQuery')
+        })
+     </script>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+</body>
+</html>
